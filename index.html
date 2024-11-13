@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Undangan Camp</title>
     <style>
-        /* Reset and body styling */
+        /* Reset dan styling body */
         * {
             margin: 0;
             padding: 0;
@@ -19,33 +19,19 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1731500205/jyq3q7jyonibppu8hfvu.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1731500205/jyq3q7jyonibppu8hfvu.jpg') no-repeat center center fixed;
             background-size: cover;
-            filter: blur(8px); /* Applying blur effect to background */
             color: #fff;
-            opacity: 0.7;
             overflow: hidden;
             position: relative;
         }
 
-        /* Overlay to ensure text visibility on blurred background */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-            z-index: -1;
-        }
-
-        /* Invitation container */
+        /* Container undangan */
         .invitation-card {
-            position: relative;
             width: 90%;
             max-width: 500px;
-            background: url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1726628726/cwf8ibc4faakxfggunzj.png') no-repeat center center;
-            background-size: cover;
+            background: rgba(255, 255, 255, 0.1);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -53,12 +39,10 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            opacity: 0.7; /* Slightly higher opacity to improve text visibility */
             animation: fadeInUp 2s ease-out;
-            color: black; /* Ensuring the text is black */
         }
 
-        /* Heading and details styling */
+        /* Styling heading dan detail */
         h1 {
             font-size: 2rem;
             letter-spacing: 2px;
@@ -68,7 +52,7 @@
 
         h2 {
             font-size: 1.2rem;
-            color: #ffc107;
+            color: #00B2D8;
             margin-bottom: 20px;
             animation: fadeIn 1.8s ease-out;
         }
@@ -84,13 +68,13 @@
             margin: 10px 0;
         }
 
-        /* Button styling */
+        /* Styling tombol RSVP */
         .rsvp-button {
             display: inline-block;
             margin-top: 30px;
             padding: 10px 20px;
             color: #000;
-            background-color: #ffc107;
+            background-color: #00B2D8;
             border: none;
             border-radius: 5px;
             text-decoration: none;
@@ -100,10 +84,10 @@
         }
 
         .rsvp-button:hover {
-            background-color: #ffd54f;
+            background-color: #00B2D8;
         }
 
-        /* Keyframes for animations */
+        /* Keyframes untuk animasi */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -156,16 +140,16 @@
             }
         }
 
-        /* Particle animation */
+        /* Partikel animasi */
         .particle {
             position: absolute;
             border-radius: 50%;
             opacity: 0.6;
-            background-color: #ffc107;
+            background-color: #EC008C;
             animation: float 3s ease-in-out infinite;
         }
 
-        /* Responsive styling */
+        /* Styling responsive */
         @media (max-width: 600px) {
             h1 {
                 font-size: 1.5rem;
@@ -184,7 +168,7 @@
             }
         }
 
-        /* Loading Animation */
+        /* Animasi loading */
         .loader {
             position: absolute;
             top: 50%;
@@ -208,7 +192,7 @@
             }
         }
 
-        /* Bottom menu with icons */
+        /* Menu bawah dengan ikon */
         .menu {
             position: fixed;
             bottom: 20px;
@@ -226,35 +210,78 @@
         }
 
         .menu a:hover {
-            color: #ffd54f;
+            color: #00B2D8;
         }
+
+        /* Logo di atas */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 150px;
+            animation: fadeIn 1.2s ease-out;
+        }
+        @keyframes moveAndResize {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+        25% {
+            transform: translateX(10px) scale(1.1);
+        }
+        50% {
+            transform: translateX(0) scale(1);
+        }
+        75% {
+            transform: translateX(-10px) scale(1.1);
+        }
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    .moving-text {
+        font-size: 25px;
+        color: #00B2D8;
+        font-weight: bold;
+        animation: moveAndResize 3s ease-in-out infinite;
+    }
     </style>
 </head>
 
 <body>
 
-    <!-- Overlay to ensure the background text is readable -->
-    <div class="overlay"></div>
-
-    <!-- Loading Animation -->
+    <!-- Animasi loading -->
     <div class="loader"></div>
 
+    <!-- Logo -->
+    <!-- <img src="https://res.cloudinary.com/dwdpjepcr/image/upload/v1726628726/cwf8ibc4faakxfggunzj.png" alt="Logo" class="logo"> -->
+
     <div class="invitation-card">
-        <h1>Anda Diundang ke Camp!</h1>
-        <h2>Khoirul Ma'Arif</h2>
+        <h1>Undangan ke Camp!</h1>
+        <h2 class="moving-text">Bapak Khoirul Ma'Arif</h2>
+
         <p>IT Head, PT Pesta Pora Abadi</p>
 
         <div class="details">
-            <p><strong>Acara:</strong> Adventure Camp</p>
-            <p><strong>Tanggal:</strong> 15-16 November 2024</p>
-            <p><strong>Lokasi:</strong> Villa Sultan, Kota Batu</p>
-            <p>Menyala Gacoankuuuu !!!</p>
+            <p><strong>Acara :</strong> Adventure Camp</p>
+            <p><strong>Tanggal :</strong> 15-16 November 2024</p>
+            <p><strong>Lokasi :</strong> <a href="https://g.co/kgs/GsW7zFG" target="_blank" style="color: #ffc107; text-decoration: none; font-weight: bold;">Villa Sultan, Kota Batu</a></p>
+            <p style="font-size: 25px; color: red; font-weight: bold; text-shadow: 
+            1px 1px 0 #ffffff, 
+            -1px -1px 0 #ffffff, 
+            1px -1px 0 #ffffff, 
+            -1px 1px 0 #ffffff;">
+            <i class="fa fa-fire"></i> Menyala Gacoankuuuu !!!
+        </p>
+            
+            
         </div>
 
         <a href="https://wa.me/6287765888565?text=Saya%20bersedia%20untuk%20mengikuti%20Camp!" class="rsvp-button"
-            target="_blank">RSVP Sekarang</a>
+            target="_blank">Skuyy donkk !!!</a>
 
-        <!-- Particles for a starry effect -->
+        <!-- Partikel untuk efek bintang -->
         <div class="particle" style="width: 6px; height: 6px; top: 10%; left: 20%; animation-duration: 4s;"></div>
         <div class="particle" style="width: 8px; height: 8px; top: 30%; left: 70%; animation-duration: 6s;"></div>
         <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 30%; animation-duration: 3s;"></div>
@@ -262,18 +289,18 @@
         <div class="particle" style="width: 4px; height: 4px; top: 60%; left: 80%; animation-duration: 5s;"></div>
     </div>
 
-    <!-- Bottom menu with icons -->
+    <!-- Menu bawah dengan ikon -->
     <div class="menu">
-        <a href="#" title="Event Details"><i class="fa fa-calendar"></i></a>
-        <a href="#" title="Contact"><i class="fa fa-phone"></i></a>
-        <a href="#" title="Share"><i class="fa fa-share-alt"></i></a>
+        <a href="#" title="Detail Acara"><i class="fa fa-calendar"></i></a>
+        <a href="#" title="Kontak"><i class="fa fa-phone"></i></a>
+        <a href="#" title="Bagikan"><i class="fa fa-share-alt"></i></a>
     </div>
 
-    <!-- FontAwesome for Icons -->
+    <!-- FontAwesome untuk ikon -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
     <script>
-        // Hide the loader after page load
+        // Menyembunyikan loader setelah halaman selesai dimuat
         window.onload = function () {
             document.querySelector('.loader').style.display = 'none';
         };
