@@ -21,10 +21,10 @@
             min-height: 100vh;
             background: url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1731500205/jyq3q7jyonibppu8hfvu.jpg') no-repeat center center fixed;
             background-size: cover;
+            filter: blur(8px); /* Added blur effect to background */
             color: #fff;
             overflow: hidden;
             position: relative;
-            filter: blur(8px); /* Apply blur effect to the background */
         }
 
         /* Invitation container */
@@ -33,6 +33,7 @@
             max-width: 500px;
             background: url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1726628726/cwf8ibc4faakxfggunzj.png') no-repeat center center;
             background-size: cover;
+            background-blur: 10px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -40,21 +41,18 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            opacity: 0.7;
+            opacity: 0.9; /* Set opacity to 0.9 for better visibility */
             animation: fadeInUp 2s ease-out;
-            z-index: 1; /* Ensure the card is on top of the blurred background */
+            color: black; /* Text color changed to black */
         }
 
         /* Heading and details styling */
-        h1, h2, p {
-            color: black; /* Change text color to black */
-        }
-
         h1 {
             font-size: 2rem;
             letter-spacing: 2px;
             margin-bottom: 10px;
             animation: fadeIn 1.5s ease-out;
+            color: black; /* Set text color to black */
         }
 
         h2 {
@@ -62,6 +60,7 @@
             color: #ffc107;
             margin-bottom: 20px;
             animation: fadeIn 1.8s ease-out;
+            color: black; /* Set text color to black */
         }
 
         .details {
@@ -73,6 +72,7 @@
             font-size: 1rem;
             line-height: 1.5;
             margin: 10px 0;
+            color: black; /* Set text color to black */
         }
 
         /* Button styling */
