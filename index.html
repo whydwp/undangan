@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Invitation</title>
+    <style>
+        /* Reset and body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('https://source.unsplash.com/featured/?camping,nature') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        /* Invitation container */
+        .invitation-card {
+            width: 80%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Heading and details styling */
+        h1 {
+            font-size: 2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            animation: fadeIn 1.5s ease-out;
+        }
+        h2 {
+            font-size: 1.2rem;
+            color: #ffc107;
+            margin-bottom: 20px;
+            animation: fadeIn 1.8s ease-out;
+        }
+        .details {
+            margin-top: 20px;
+            animation: fadeIn 2.5s ease-out;
+        }
+        .details p {
+            font-size: 1rem;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        /* Button styling */
+        .rsvp-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            color: #000;
+            background-color: #ffc107;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            animation: bounce 2s infinite;
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Particle animation */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.6;
+            background-color: #ffc107;
+            animation: float 3s ease-in-out infinite;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <h1>You’re Invited to the Camp!</h1>
+        <h2>Khoirul Ma'Arif</h2>
+        <p>IT Head, PT Pesta Pora Abadi</p>
+        
+        <div class="details">
+            <p><strong>Event:</strong> Adventure Camp</p>
+            <p><strong>Date:</strong> 25th - 27th November 2024</p>
+            <p><strong>Location:</strong> Green Hills Campground, Bogor</p>
+            <p>Prepare for an exciting adventure with team-building activities, nature hikes, and bonfires under the stars!</p>
+        </div>
+
+        <a href="#" class="rsvp-button">RSVP Now</a>
+
+        <!-- Particles for a starry effect -->
+        <div class="particle" style="width: 6px; height: 6px; top: 10%; left: 20%; animation-duration: 4s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 30%; left: 70%; animation-duration: 6s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 30%; animation-duration: 3s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 80%; left: 50%; animation-duration: 7s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; top: 60%; left: 80%; animation-duration: 5s;"></div>
+    </div>
+
+</body>
+</html>
