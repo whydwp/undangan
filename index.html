@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camp Invitation</title>
+    <title>Undangan Camp</title>
     <style>
         /* Reset and body styling */
         * {
@@ -11,22 +12,24 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('https://source.unsplash.com/featured/?camping,nature') no-repeat center center fixed;
+                url('https://images.unsplash.com/photo-1593642532973-d31b6557fa68') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             overflow: hidden;
+            position: relative;
         }
 
         /* Invitation container */
         .invitation-card {
-            width: 80%;
+            width: 90%;
             max-width: 500px;
             background: rgba(255, 255, 255, 0.1);
             padding: 20px;
@@ -36,6 +39,7 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            animation: fadeInUp 2s ease-out;
         }
 
         /* Heading and details styling */
@@ -45,16 +49,19 @@
             margin-bottom: 10px;
             animation: fadeIn 1.5s ease-out;
         }
+
         h2 {
             font-size: 1.2rem;
             color: #ffc107;
             margin-bottom: 20px;
             animation: fadeIn 1.8s ease-out;
         }
+
         .details {
             margin-top: 20px;
             animation: fadeIn 2.5s ease-out;
         }
+
         .details p {
             font-size: 1rem;
             line-height: 1.5;
@@ -72,22 +79,65 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            animation: bounce 2s infinite;
+            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
+        }
+
+        .rsvp-button:hover {
+            background-color: #ffd54f;
         }
 
         /* Keyframes for animations */
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
         @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
-            100% { transform: translateY(0); }
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
 
         /* Particle animation */
@@ -99,23 +149,91 @@
             animation: float 3s ease-in-out infinite;
         }
 
+        /* Responsive styling */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            .details p {
+                font-size: 0.9rem;
+            }
+
+            .rsvp-button {
+                padding: 8px 16px;
+            }
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #ffc107;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Bottom menu with icons */
+        .menu {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu a {
+            color: #ffc107;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: #ffd54f;
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- Loading Animation -->
+    <div class="loader"></div>
+
     <div class="invitation-card">
-        <h1>You’re Invited to the Camp!</h1>
+        <h1>Anda Diundang ke Camp!</h1>
         <h2>Khoirul Ma'Arif</h2>
         <p>IT Head, PT Pesta Pora Abadi</p>
-        
+
         <div class="details">
-            <p><strong>Event:</strong> Adventure Camp</p>
-            <p><strong>Date:</strong> 25th - 27th November 2024</p>
-            <p><strong>Location:</strong> Green Hills Campground, Bogor</p>
-            <p>Prepare for an exciting adventure with team-building activities, nature hikes, and bonfires under the stars!</p>
+            <p><strong>Acara:</strong> Camp Petualangan</p>
+            <p><strong>Tanggal:</strong> 15 - 16 November 2024</p>
+            <p><strong>Lokasi:</strong> Villa Sultan, Kota Batu</p>
+            <p>Persiapkan diri untuk petualangan seru dengan kegiatan pembangunan tim, pendakian alam, dan api unggun di bawah bintang!</p>
         </div>
 
-        <a href="#" class="rsvp-button">RSVP Now</a>
+        <a href="https://wa.me/6287765888565?text=Saya%20bersedia%20untuk%20mengikuti%20Camp!" class="rsvp-button"
+            target="_blank">Yukkk Sekarang</a>
 
         <!-- Particles for a starry effect -->
         <div class="particle" style="width: 6px; height: 6px; top: 10%; left: 20%; animation-duration: 4s;"></div>
@@ -125,5 +243,24 @@
         <div class="particle" style="width: 4px; height: 4px; top: 60%; left: 80%; animation-duration: 5s;"></div>
     </div>
 
+    <!-- Bottom menu with icons -->
+    <div class="menu">
+        <a href="#" title="Detail Acara"><i class="fa fa-calendar"></i></a>
+        <a href="#" title="Kontak"><i class="fa fa-phone"></i></a>
+        <a href="#" title="Bagikan"><i class="fa fa-share-alt"></i></a>
+    </div>
+
+    <!-- FontAwesome for Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Hide the loader after background image is fully loaded
+        window.onload = function () {
+            // Hide the loader
+            document.querySelector('.loader').style.display = 'none';
+        };
+    </script>
+
 </body>
+
 </html>
