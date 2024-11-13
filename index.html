@@ -24,6 +24,7 @@
             color: #fff;
             overflow: hidden;
             position: relative;
+            filter: blur(8px); /* Apply blur effect to the background */
         }
 
         /* Invitation container */
@@ -32,7 +33,6 @@
             max-width: 500px;
             background: url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1726628726/cwf8ibc4faakxfggunzj.png') no-repeat center center;
             background-size: cover;
-            background-blur: 10px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -42,9 +42,14 @@
             overflow: hidden;
             opacity: 0.7;
             animation: fadeInUp 2s ease-out;
+            z-index: 1; /* Ensure the card is on top of the blurred background */
         }
 
         /* Heading and details styling */
+        h1, h2, p {
+            color: black; /* Change text color to black */
+        }
+
         h1 {
             font-size: 2rem;
             letter-spacing: 2px;
