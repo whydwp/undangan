@@ -1,25 +1,22 @@
 <html lang="id">
- <head>
-  <meta charset="UTF-8">
-   <meta content="width=device-width, initial-scale=1.0">
-    <title>
-     Undangan Campcer Season 2
-    </title>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0">
+    <title>Undangan Campcer Season 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <link href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" rel="stylesheet"/>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js">
-    </script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
-     body {
+        body {
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://res.cloudinary.com/dwdpjepcr/image/upload/v1731500205/jyq3q7jyonibppu8hfvu.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
             overflow: hidden;
             scroll-behavior: smooth;
+            padding-top: 10px; /* Add padding to the top of the body */
         }
         .invitation-card {
             background: rgba(255, 255, 255, 0.1);
@@ -31,8 +28,8 @@
             position: relative;
             overflow: hidden;
             animation: fadeInUp 2s ease-out;
-            max-height: 80vh; /* Adjust the max height */
-            overflow-y: auto; /* Add scroll if content overflows */
+            max-height: 80vh;
+            overflow-y: auto;
         }
         .rsvp-button {
             display: inline-block;
@@ -132,10 +129,10 @@
             background: rgba(128, 128, 128, 0.7);
         }
         .invitation-card::-webkit-scrollbar {
-            display: none; /* Hide scrollbar by default */
+            display: none;
         }
         .invitation-card:hover::-webkit-scrollbar {
-            display: block; /* Show scrollbar on hover */
+            display: block;
         }
         .menu a {
             transition: transform 0.3s ease, background-color 0.3s ease;
@@ -151,129 +148,83 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .back-to-top {
+            position: fixed;
+            bottom: 70px;
+            right: 10px;
+            background-color: #00B2D8;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-align: center;
+            cursor: pointer;
+            display: none;
+            z-index: 50;
+        }
+        .back-to-top:hover {
+            background-color: #007B9E;
+        }
     </style>
-   </meta>
-  </meta>
- </head>
- <body class="flex flex-col items-center justify-center min-h-screen">
-  <div class="invitation-card w-11/12 max-w-md mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg text-center mb-20" id="home">
-   <h1 class="text-4xl font-bold mb-2 animate-fadeIn">
-    Campcer Season 2
-   </h1>
-   <h2 class="text-2xl text-blue-400 mb-4 animate-fadeIn zoom-animation">
-    Bapak Khoirul Ma'Arif
-   </h2>
-   <p class="text-lg mb-6">
-    IT Head, PT Pesta Pora Abadi
-   </p>
-   <div class="details text-lg mb-6 animate-fadeIn">
-    <p>
-     <strong>
-      Acara :
-     </strong>
-     Campcer
-    </p>
-    <p>
-     <strong>
-      Tanggal :
-     </strong>
-     15-16 November 2024
-    </p>
-    <p>
-     <strong>
-      Hari :
-     </strong>
-     Jumat - Sabtu
-    </p>
-    <p>
-     <strong>
-      Jam :
-     </strong>
-     08:00 - 17:00 WIB
-    </p>
-    <p>
-     <strong>
-      Lokasi :
-     </strong>
-     Villa Sultan, Kota Batu
-    </p>
-    <p>
-     <strong>
-      Dresscode :
-     </strong>
-     Putih, Jangan lupa sempakan !!
-    </p>
-    <p>
-     <strong>
-      Yang Harus Dibawa :
-     </strong>
-     Peralatan pribadi, jaket hangat, perlengkapan camping
-    </p>
-    <p class="text-red-500 font-bold text-2xl mt-4 animate-fadeIn" style="text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;">
-     <i class="fa fa-fire">
-     </i>
-     Menyala Gacoankuuuu !!!
-    </p>
-   </div>
-   <a class="rsvp-button" href="https://wa.me/6287765888565?text=Saya%20siap%20mengikuti%20Campcer%20Season%202%20Kak%20Rama%20Les't%20Goooo!!" target="_blank">
-    Skuyy donkk !!!
-   </a>
-   <div class="particle" style="width: 6px; height: 6px; top: 10%; left: 20%; animation-duration: 4s;">
-   </div>
-   <div class="particle" style="width: 8px; height: 8px; top: 30%; left: 70%; animation-duration: 6s;">
-   </div>
-   <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 30%; animation-duration: 3s;">
-   </div>
-   <div class="particle" style="width: 10px; height: 10px; top: 80%; left: 50%; animation-duration: 7s;">
-   </div>
-   <div class="particle" style="width: 4px; height: 4px; top: 60%; left: 80%; animation-duration: 5s;">
-   </div>
-  </div>
-  <div class="menu fixed bottom-0 left-0 w-full bg-blue-500 bg-opacity-50 backdrop-blur-md text-pink-500 py-2 flex justify-around z-10">
-   <a class="flex flex-col items-center hover:text-white p-2" href="#home" title="Home">
-    <i class="fa fa-home text-base">
-    </i>
-    <span class="text-xs">
-     Home
-    </span>
-   </a>
-   <a class="flex flex-col items-center hover:text-white p-2" href="#map" title="Lokasi">
-    <i class="fa fa-map-marker text-base">
-    </i>
-    <span class="text-xs">
-     Lokasi
-    </span>
-   </a>
-   <a class="flex flex-col items-center hover:text-white p-2" href="https://wa.me/6287765888565?text=Saya%20siap%20mengikuti%20Campcer%20Season%202%20Kak%20Rama%20Les't%20Goooo!!" target="_blank" title="Hubungi Admin">
-    <i class="fa fa-phone text-base">
-    </i>
-    <span class="text-xs">
-     Hubungi
-    </span>
-   </a>
-   <a class="flex flex-col items-center hover:text-white p-2" href="#rundown" title="Rundown Acara">
-    <i class="fa fa-list text-base">
-    </i>
-    <span class="text-xs">
-     Rundown
-    </span>
-   </a>
-  </div>
-  <div class="w-11/12 max-w-md mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg text-center mb-20" id="map">
-   <div id="map-container" style="height: 400px; width: 100%; border-radius: 10px;">
-   </div>
-  </div>
-  <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-20 hidden" id="rundown-modal">
-   <div class="relative bg-white p-4 rounded-lg max-w-full max-h-full overflow-auto">
-    <button class="absolute top-2 right-2 text-black" id="close-modal">
-     <i class="fa fa-times">
-     </i>
-    </button>
-    <img alt="Rundown Acara" class="max-w-full h-auto" src="https://res.cloudinary.com/dwdpjepcr/image/upload/v1731575422/nb3byd4et5otn7q9aa6y.png"/>
-   </div>
-  </div>
-  <script>
-   document.querySelector('a[href="#rundown"]').addEventListener('click', function (e) {
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+    <div class="invitation-card w-11/12 max-w-md mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg text-center mb-5" id="home">
+        <h1 class="text-4xl font-bold mb-2 animate-fadeIn">Campcer Season 2</h1>
+        <h2 class="text-2xl text-blue-400 mb-4 animate-fadeIn zoom-animation">Keluarga Besar IT</h2>
+        <!-- <p class="text-lg mb-6">IT Head, PT Pesta Pora Abadi</p> -->
+        <div class="details text-lg mb-6 animate-fadeIn">
+            <p><strong>Acara :</strong> Campcer Season 2</p>
+            <p><strong>Tanggal :</strong> 16-17 November 2024</p>
+            <p><strong>Hari :</strong> Start Sabtu 14:00 </p>
+            <p><strong>Hari :</strong> End Minggu 12:00 </p>
+            <p><strong>Lokasi :</strong> <a href="https://g.co/kgs/GsW7zFG" target="_blank" style="color: #ffc107; text-decoration: none; font-weight: bold;">The Villa Sultan, Kota Batu</a></p>
+            <p><strong>Dresscode Atasan :</strong> Putih</p>
+            <p><strong>Dresscode Bawahan :</strong> Bebas</p>
+            <p><strong>Yang Harus Dibawa :</strong> Peralatan pribadi, jaket hangat, perlengkapan camping, baju ganti</p>
+            <p class="text-red-500 font-bold text-2xl mt-4 animate-fadeIn" style="text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff;">
+                <i class="fa fa-fire"></i> Menyala Gacoankuuuu !!!
+            </p>
+        </div>
+        <!-- <a class="rsvp-button" href="https://wa.me/6287765888565?text=Saya%20siap%20mengikuti%20Campcer%20Season%202%20Kak%20Rama%20Les't%20Goooo!!" target="_blank">Skuyy donkk !!!</a> -->
+        <div class="particle" style="width: 6px; height: 6px; top: 10%; left: 20%; animation-duration: 4s;"></div>
+        <div class="particle" style="width: 8px; height: 8px; top: 30%; left: 70%; animation-duration: 6s;"></div>
+        <div class="particle" style="width: 5px; height: 5px; top: 50%; left: 30%; animation-duration: 3s;"></div>
+        <div class="particle" style="width: 10px; height: 10px; top: 80%; left: 50%; animation-duration: 7s;"></div>
+        <div class="particle" style="width: 4px; height: 4px; top: 60%; left: 80%; animation-duration: 5s;"></div>
+    </div>
+    <div class="menu fixed bottom-0 left-0 w-full bg-blue-500 bg-opacity-50 backdrop-blur-md text-pink-500 py-2 flex justify-around z-10">
+        <a class="flex flex-col items-center hover:text-white p-2" href="#home" title="Home">
+            <i class="fa fa-home text-base"></i>
+            <span class="text-xs">Home</span>
+        </a>
+        <a class="flex flex-col items-center hover:text-white p-2" href="#map" title="Lokasi">
+            <i class="fa fa-map-marker text-base"></i>
+            <span class="text-xs">Lokasi</span>
+        </a>
+        <a class="flex flex-col items-center hover:text-white p-2" href="https://wa.me/6287765888565?text=Saya%20siap%20mengikuti%20Campcer%20Season%202%20Kak%20Rama%20Les't%20Goooo!!" target="_blank" title="Hubungi Admin">
+            <i class="fa fa-phone text-base"></i>
+            <span class="text-xs">Hubungi</span>
+        </a>
+        <a class="flex flex-col items-center hover:text-white p-2" href="#rundown" title="Rundown Acara">
+            <i class="fa fa-list text-base"></i>
+            <span class="text-xs">Rundown</span>
+        </a>
+    </div>
+    <div class="w-11/12 max-w-md mx-auto p-6 bg-white bg-opacity-10 rounded-lg shadow-lg backdrop-filter backdrop-blur-lg text-center mb-5" id="map">
+        <div id="map-container" style="height: 400px; width: 100%; border-radius: 10px;"></div>
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-20 hidden" id="rundown-modal">
+        <div class="relative bg-white p-4 rounded-lg max-w-full max-h-full overflow-auto">
+            <button class="absolute top-2 right-2 text-black" id="close-modal">
+                <i class="fa fa-times"></i>
+            </button>
+            <img alt="Rundown Acara" class="max-w-full h-auto" src="https://res.cloudinary.com/dwdpjepcr/image/upload/v1731575422/nb3byd4et5otn7q9aa6y.png"/>
+        </div>
+    </div>
+    <div class="back-to-top" id="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+    <script>
+        document.querySelector('a[href="#rundown"]').addEventListener('click', function (e) {
             e.preventDefault();
             document.getElementById('rundown-modal').classList.remove('hidden');
         });
@@ -292,6 +243,24 @@
         L.marker([-7.8866104, 112.5128455]).addTo(map)
             .bindPopup('<a href="https://maps.app.goo.gl/TzQr3Q7ipxs1SMVp8" target="_blank">Villa Sultan, Kota Batu</a>')
             .openPopup();
-  </script>
- </body>
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
 </html>
