@@ -299,9 +299,7 @@
             </p>
         </div>
 
-        <!-- Gambar setelah lokasi dengan modal -->
-
-
+       
 
         <a href="https://wa.me/6287765888565?text=Saya%20siap%20mengikuti%20Campcer%20Season%202%20Kak%20Rama%20Les't%20Goooo!!"
             class="rsvp-button" target="_blank">
@@ -326,18 +324,15 @@
     <script>
         const map = L.map('map').setView([-7.8673917, 112.5238262], 13);
 
-        // Base map layer
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 18,
         }).addTo(map);
 
-        // Weather overlay from OpenWeatherMap
         const weatherLayer = L.tileLayer(`https://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=YOUR_API_KEY`, {
             attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>',
-            opacity: 0.5 // Adjust for transparency of the weather overlay
+            opacity: 0.5
         }).addTo(map);
 
-        // Marker for The Villa Sultan location
         L.marker([-7.8673917, 112.5238262]).addTo(map).bindPopup('The Villa Sultan, Kota Batu').openPopup();
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -367,6 +362,9 @@
                 }
             };
         });
+        document.getElementById('map').addEventListener('click', function () {
+    window.open("https://maps.app.goo.gl/7dDS3g3D7fGeZFA78?g_st=iw", "_blank");
+});
     </script>
 </body>
 
